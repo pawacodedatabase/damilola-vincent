@@ -40,10 +40,10 @@ const EmailPopup: React.FC = () => {
                  Welcome to my Porfolio
                 </h2>
                 <p className="text-gray-600 mt-4 text-sm font-thin ">
-                Hi, I'm Damilola Vincent, a passionate web developer and the creative mind behind Pawacode. I specialize in building visually stunning, responsive, and user-friendly websites that bring ideas to life. Let's turn your vision into reality! </p>
+                Hi, I'm <b>Damilola Vincent</b>, a passionate web developer and the creative mind behind Pawacode. I specialize in building visually stunning, responsive, and user-friendly websites that bring ideas to life. Let's turn your vision into reality! </p>
                 <Link to="/projects">
                   <button className="mt-6 px-6 py-2 text-sm bg-black text-white hover:bg-white hover:border hover:text-black hover:border-black mb-3">
-                   Check  Projects
+                   Check My Projects
                   </button>
                 </Link>
               </div>

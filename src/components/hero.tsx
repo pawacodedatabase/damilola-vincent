@@ -235,9 +235,9 @@ const Hero: React.FC = () => {
               {buttonContent[0].title}
             </button>
           </Link>
-          <Link to={buttonContent[1].link}>
+          <Link to={'/contact'}>
             <button className="px-6 py-3 border-2 bg-black text-white hover:bg-white hover:text-black transition">
-              {buttonContent[1].title}
+             Hire Me
             </button>
           </Link>
         </div>
