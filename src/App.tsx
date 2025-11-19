@@ -12,6 +12,9 @@ import SignUp from './pages/signup';
 import Login from './pages/login';
 import Dashboard from './pages/Dashboard';
 import { AuthProvider } from './components/authContext'; // AuthProvider for global authentication
+import Admin from './Backend/projectadmin';
+import Projects from './Backend/projects';
+import DonationDetail from './Backend/projectdetail';
 
 
 const App: React.FC = () => {
@@ -52,6 +55,9 @@ const App: React.FC = () => {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/contact" element={<ContactDashboard />} />
                 <Route path="/projects" element={<ProjectList />} />
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/newprojects" element={<Projects />} />
+                <Route path="/newprojects/:id" element={<DonationDetail />} />
                 <Route path="/projects/:id" element={<ProjectDetail />} />
               </Routes>
             </ScrollToTop>
