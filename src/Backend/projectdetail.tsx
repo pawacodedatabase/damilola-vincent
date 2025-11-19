@@ -115,12 +115,14 @@ const DonationDetail: React.FC = () => {
         </div>
 
         {/* BIG IMAGE */}
-        <div className="flex justify-center mb-6">
-          <img
-            src={post.images[currentImageIndex]}
-            className="max-w-3xl rounded-md shadow"
-          />
-        </div>
+       <div className="flex justify-center mb-6">
+  <img
+    src={post.images[currentImageIndex]}
+    className="w-full max-w-xl rounded-md shadow border-4 border-purple-600"
+    alt={post.name}
+  />
+</div>
+
 
         {/* SHORT DESCRIPTION */}
         <p className="text-center text-sm dark:text-purple-300 mb-6">
