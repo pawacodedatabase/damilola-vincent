@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Header from "../pages/header";
 import axios from "axios";
-import {  FaLink } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
 
 import StarRating from "./../pages/PROJECTS/StarRating";
 
 const JSON_BIN_ID = "691de48aae596e708f633441";
-const API_KEY =
-  "$2a$10$M/z2e.cKX1SUsOT62D4pk.gbhiuJhRx0u3VzNAe.DsTPIHHAQE6Zu";
+const API_KEY = "$2a$10$M/z2e.cKX1SUsOT62D4pk.gbhiuJhRx0u3VzNAe.DsTPIHHAQE6Zu";
 const BASE_URL = `https://api.jsonbin.io/v3/b/${JSON_BIN_ID}`;
 
 interface Product {
@@ -52,17 +51,45 @@ const DonationDetail: React.FC = () => {
     fetchPost();
   }, [id]);
 
-  if (loading)
-    return (
-      <p className="text-center p-6 text-gray-500">Loading donation...</p>
-    );
+  if (loading) return <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+  {[1, 2].map((_, i) => (
+    <div
+      key={i}
+      className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden"
+    >
+      <div className="h-48 w-full bg-gray-300 dark:bg-gray-600"></div>
+      <div className="p-4 space-y-3">
+        <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4"></div>
+           </div>
+    </div>
+  ))}
+</div>
+;
 
   if (!post)
     return (
-      <p className="text-center p-6 text-red-600">Donation post not found.</p>
+  <div>
+    <p className="text-center p-6 text-red-600">Project not found.</p>
+     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+  {[1, 2].map((_, i) => (
+    <div
+      key={i}
+      className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden"
+    >
+      <div className="h-48 w-full bg-gray-300 dark:bg-gray-600"></div>
+      <div className="p-4 space-y-3">
+        <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4"></div>
+        <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-1/2"></div>
+        <div className="h-6 bg-gray-300 dark:bg-gray-600 rounded w-full"></div>
+      </div>
+    </div>
+  ))}
+</div>
+
+  </div>
+       
     );
 
- 
   // const shareUrl = encodeURIComponent(window.location.href);
 
   return (
@@ -123,7 +150,6 @@ const DonationDetail: React.FC = () => {
         <hr />
         <br />
 
-       
         {/* BACK LINK */}
         <div className="text-center mt-12">
           <Link
